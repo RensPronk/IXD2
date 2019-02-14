@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Line Chart</title>
+    </head>
+
+    <body>  
+        <section class="container">
+                <canvas id="afstand"></canvas>
+            </section>
+
+             <section id="barchartVooraad">
+                <canvas id="vooraad"></canvas>
+            </section>
+
+             <section id="barchartSnelheid">
+                <canvas id="sneheid"></canvas>
+            </section>
+
+            <section id="barchartEten">
+                <canvas id="eten"></canvas>
+            </section>
+
+            <section id="barchartAcceleratie">
+                <canvas id="acceleratie"></canvas>
+            </section>
+
+            <section id="barchartGforce">
+                <canvas id="gforce"></canvas>
+            </section>
+        </section>
+
+                     <script>
+                        let afstand = document.getElementById('afstand').getContext('2d');
+
+                        let vooraad = document.getElementById('vooraad').getContext('2d');
+
+                        let snelheid = document.getElementById('sneheid').getContext('2d');
+
+                        let acceleratie = document.getElementById('acceleratie').getContext('2d');
+
+                        let gforce = document.getElementById('gforce').getContext('2d');
+
+
+                        
+
+
+                        let barchart1 = new Chart(afstand, {
+                            type:'line', 
+                            data:{
+                                labels:['1', '2', '3', '4', '5', '6','7'],
+                                datasets:[{
+                                label:'Distance travelled',
+                                data:[
+                                10,
+                                23,
+                                40,
+                                66,
+                                85,
+                                107,
+                                228
+                                ],
+                                scaleOverride : true,
+                                scaleSteps : 228,
+                                scaleStepWidth : 1,
+                                scaleStartValue : 0 ,
+                            }]
+                            },
+                            options:{
+                                scales: {
+                                    yAxes:[{
+                                        stacked: true,
+                                        gridLines: {
+                                            display: false
+                                        },
+                                          ticks: {
+                                            min: 0,
+                                            max: 228,
+                                          },
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Distance x1.000.000km'
+                                        }
+                                    }],
+                                    xAxes:[{
+                                        gridLines: {
+                                            display: false
+                                        },
+                                         scaleLabel: {
+                                            display: true,
+                                            labelString: 'Weeks'
+                                        }
+                                    }]
+                                }
+                            }
+                        })
+
+                        let barchart2 = new Chart(vooraad, {
+                            type:'bar', 
+                            data:{
+                                labels:['Brandstof', 'Eten' , 'Water'],
+                                datasets:[{
+                                label:'Percentages vooraad',
+                                data:[
+                                70,
+                                59,
+                                60
+                                ],
+                                scaleOverride : true,
+                                scaleSteps : 100,
+                                scaleStepWidth : 1,
+                                scaleStartValue : 0 ,
+                            }]
+                            },
+                            options:{
+                                scales: {
+                                    yAxes:[{
+                                        stacked: true,
+                                        gridLines: {
+                                            display: false
+                                        },
+                                          ticks: {
+                                            min: 0,
+                                            max: 100,
+                                          }
+                                    }]
+                                }
+                            }
+                        })
+
+
+                            let barchart3 = new Chart(snelheid,{
+                            type:'bar', 
+                            data:{
+                                labels:['Snelheid',],
+                                datasets:[{
+                                label:'Snehheid KM/H',
+                                data:[
+                                70
+                                ],
+                                scaleOverride : true,
+                                scaleSteps : 100,
+                                scaleStepWidth : 1,
+                                scaleStartValue : 0 ,
+                            }]
+                            },
+                            options:{
+                                scales: {
+                                    yAxes:[{
+                                        stacked: true,
+                                        gridLines: {
+                                            display: false
+                                        },
+                                          ticks: {
+                                            min: 0,
+                                            max: 100,
+                                          }
+                                    }]
+                                }
+                            }
+                        })
+
+
+
+
+                             let barchart4 = new Chart(acceleratie,{
+                            type:'bar', 
+                            data:{
+                                labels:['Acceleratie',],
+                                datasets:[{
+                                label:'Acceleratie KM/u ofzo',
+                                data:[
+                                70
+                                ],
+                                scaleOverride : true,
+                                scaleSteps : 100,
+                                scaleStepWidth : 1,
+                                scaleStartValue : 0 ,
+                            }]
+                            },
+                            options:{
+                                scales: {
+                                    yAxes:[{
+                                        stacked: true,
+                                        gridLines: {
+                                            display: false
+                                        },
+                                          ticks: {
+                                            min: 0,
+                                            max: 100,
+                                          }
+                                    }]
+                                }
+                            }
+                        })
+
+
+
+                              let barchart5 = new Chart(gforce,{
+                            type:'bar', 
+                            data:{
+                                labels:['G-Force',],
+                                datasets:[{
+                                label:'G-Force in N',
+                                data:[
+                                28
+                                ],
+                                scaleOverride : true,
+                                scaleSteps : 100,
+                                scaleStepWidth : 1,
+                                scaleStartValue : 0 ,
+                            }]
+                            },
+                            options:{
+                                scales: {
+                                    yAxes:[{
+                                        stacked: true,
+                                        gridLines: {
+                                            display: false
+                                        },
+                                          ticks: {
+                                            min: 0,
+                                            max: 100,
+                                          }
+                                    }]
+                                }
+                            }
+                        })
+                    </script>
+
+    </body>
+</html>
