@@ -1,14 +1,26 @@
 
-
-
-
+#page { 
+	max-width: 1200px;
+	min-width:300px;
+	position:relative;
+	margin:0 auto;
+	height:100%;
+	background-color:#F0F8FF;
+	font-family: 'Roboto', sans-serif;
+	
+}
 
 .container {
 	display: grid;
-	grid-template-columns: 100px 600px 300px 300px 100px;
-	grid-template-rows: 100px 300px 300px 100px;
-	background-color: lightgrey;
+	grid-template-columns: 8% 84% 8%;
+	grid-template-rows: 150px 200px 200px 200px 50px;
+	background-color: #F0F8FF	;
+	position:relative;
+	margin:0 auto;
+	min-width:330px;
+	max-width: 500px;
 }
+
 
 #linechartAfstand {
 	display: grid;
@@ -18,7 +30,7 @@
 	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 2;
-	grid-row-end: 4;
+	grid-row-end: 3;
 }
 
 #barchartVooraad {
@@ -26,35 +38,36 @@
 	height: 100%;
 	width: 100%;
 
-	grid-column-start: 3;
-	grid-column-end: 4;
-	grid-row-start: 3;
-	grid-row-end: 3;
-}
-
-#barchartSnelheid {
-	display: grid;
-	height: 100%;
-	width: 100%;
-
-	grid-column-start: 3;
-	grid-column-end: 4;
-	grid-row-start: 2;
-	grid-row-end: 3;
-}
-
-
-#barchartEten {
-	display: grid;
-	height: 100%;
-	width: 100%;
-
-	grid-column-start: 3;
-	grid-column-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
 	grid-row-start: 3;
 	grid-row-end: 4;
 }
 
+#barchartSnelheid {
+	display: grid;
+	height: 50%;
+	width: 100%;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+#Spacex {
+	background-image: url(Spacex dashboard.png);
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	position:relative;
+	margin:0 auto;
+
+}
+
+/*
 #barchartAcceleratie {
 	display: grid;
 	height: 100%;
@@ -75,4 +88,122 @@
 	grid-column-end: 4;
 	grid-row-start: 3;
 	grid-row-end: 4;
+}
+*/
+
+@media only screen and (min-width: 500px) and (max-width: 720px)  {
+
+	#page { 
+	background-color:#F0F8FF	;
+
+}
+
+.container {
+	grid-template-rows: 150px 300px 300px 300px 50px;
+	background-color: #F0F8FF	;
+	min-width:500px;
+	max-width: 720px;
+}
+}
+@media only screen and (min-width:720px) and (max-width: 1000px) {
+
+
+	#page { 
+	background-color:#F0F8FF	;
+
+}
+.container {
+
+	grid-template-columns: 10% 40% 40% 10%;
+	grid-template-rows: 20% 300px 300px 20%;
+	background-color: #F0F8FF	;
+	min-width:720px;
+	max-width:1000px;
+	max-height:100%;
+
+
+}
+
+#linechartAfstand {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+
+#barchartVooraad {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+}
+
+#barchartSnelheid {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+#Spacex {
+	background-image: url(Spacex dashboard.png);
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+}
+}
+
+@media only screen and (min-width:1000px){
+
+
+	#page { 
+	background-color:lightblue;
+
+}
+
+	.container {
+
+	grid-template-columns: 10% 40% 40% 10%;
+	background-color: #F0F8FF	;
+	min-width:1000px;
+	min-height:400px;
+	top:10%;
+	bottom:10%;
+
+}
+
+#linechartAfstand {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
+
+#barchartVooraad {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+#barchartSnelheid {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+#Spacex {
+	background-image: url(Spacex dashboard.png);
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+}
 }

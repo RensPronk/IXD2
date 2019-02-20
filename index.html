@@ -9,7 +9,7 @@
         <title>Line Chart</title>
     </head>
 
-    <body>  
+    <body id='page'>  
         <section class="container">
             <section id="linechartAfstand">
                 <canvas id="afstand"></canvas>
@@ -23,6 +23,12 @@
                 <canvas id="sneheid"></canvas>
             </section>
 
+            <section id="Spacex">
+
+                    <img src="Spacex dashboard.png" width="300px" alt="Spacex">
+
+            </section>
+<!--
             <section id="barchartEten">
                 <canvas id="eten"></canvas>
             </section>
@@ -34,6 +40,7 @@
             <section id="barchartGforce">
                 <canvas id="gforce"></canvas>
             </section>
+-->
         </section>
 
                      <script>
@@ -43,11 +50,13 @@
 
                         let snelheid = document.getElementById('sneheid').getContext('2d');
 
+                        /*
+
                         let acceleratie = document.getElementById('acceleratie').getContext('2d');
 
                         let gforce = document.getElementById('gforce').getContext('2d');
 
-
+                        */
                         
 
 
@@ -57,17 +66,19 @@
                                 labels:['1', '2', '3', '4', '5', '6','7'],
                                 datasets:[{
                                 label:'Distance travelled',
+                                fillColor: "rgba(220,220,220,0.5)", 
                                 data:[
-                                10,
-                                23,
-                                40,
-                                66,
-                                85,
-                                107,
-                                228
+                                9,
+                                21,
+                                34,
+                                36,
+                                59,
+                                87,
+                                100
                                 ],
+                                backgroundColor: ["#005288"],
                                 scaleOverride : true,
-                                scaleSteps : 228,
+                                scaleSteps : 100,
                                 scaleStepWidth : 1,
                                 scaleStartValue : 0 ,
                             }]
@@ -81,12 +92,8 @@
                                         },
                                           ticks: {
                                             min: 0,
-                                            max: 228,
-                                          },
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: 'Distance x1.000.000km'
-                                        }
+                                            max: 100,
+                                          }
                                     }],
                                     xAxes:[{
                                         gridLines: {
@@ -112,6 +119,7 @@
                                 59,
                                 60
                                 ],
+                                backgroundColor: ["800000", "#D2691E","blue"],
                                 scaleOverride : true,
                                 scaleSteps : 100,
                                 scaleStepWidth : 1,
@@ -144,6 +152,7 @@
                                 data:[
                                 70
                                 ],
+                                backgroundColor: ["#005288"],
                                 scaleOverride : true,
                                 scaleSteps : 100,
                                 scaleStepWidth : 1,
@@ -168,7 +177,7 @@
 
 
 
-
+/*       
                              let barchart4 = new Chart(acceleratie,{
                             type:'bar', 
                             data:{
@@ -200,7 +209,7 @@
                             }
                         })
 
-
+       -->
 
                               let barchart5 = new Chart(gforce,{
                             type:'bar', 
@@ -232,6 +241,7 @@
                                 }
                             }
                         })
+                    */
                     </script>
 
     </body>
