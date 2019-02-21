@@ -111,15 +111,15 @@
                         let barchart2 = new Chart(vooraad, {
                             type:'bar', 
                             data:{
-                                labels:['Brandstof', 'Eten' , 'Water'],
+                                labels:['Fuel', 'Food' , 'Water'],
                                 datasets:[{
-                                label:'Percentages vooraad',
+                                label:'Percentage onboard supplies',
                                 data:[
                                 70,
                                 59,
                                 60
                                 ],
-                                backgroundColor: ["800000", "#D2691E","blue"],
+                                backgroundColor: ["#800000", "#D2691E","blue"],
                                 scaleOverride : true,
                                 scaleSteps : 100,
                                 scaleStepWidth : 1,
@@ -144,17 +144,18 @@
 
 
                             let barchart3 = new Chart(snelheid,{
-                            type:'bar', 
+                            type:'doughnut', 
                             data:{
-                                labels:['Snelheid',],
+                                labels:['Speed',],
                                 datasets:[{
-                                label:'Snehheid KM/H',
+                                label:'Speed KM/S',
                                 data:[
-                                70
+                                11,
+                                9
                                 ],
                                 backgroundColor: ["#005288"],
                                 scaleOverride : true,
-                                scaleSteps : 100,
+                                scaleSteps : 20,
                                 scaleStepWidth : 1,
                                 scaleStartValue : 0 ,
                             }]
@@ -162,15 +163,24 @@
                             options:{
                                 scales: {
                                     yAxes:[{
-                                        stacked: true,
                                         gridLines: {
                                             display: false
-                                        },
-                                          ticks: {
-                                            min: 0,
-                                            max: 100,
-                                          }
+                                        }
                                     }]
+                                },
+                                cutoutPercentage: 50,
+                                rotation: -3.1415926535898,
+                                circumference: 3.1415926535898,
+                                legend: {
+                                    display: false
+                                },
+                                tooltips: {
+                                    enabled: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: '11 KM/S',
+                                    position: "bottom"
                                 }
                             }
                         })
