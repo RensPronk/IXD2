@@ -46,8 +46,8 @@
 
 #barchartSnelheid {
 	display: grid;
-	height: 20vh;
-	width: 30vw;
+	height: 50vh;
+	width: 50vw;
 
 	grid-column-start: 2;
 	grid-column-end: 3;
@@ -144,6 +144,12 @@
 }
 
 #barchartSnelheid {
+	height: 30vh;
+	width: 30vw;
+
+	position:relative;
+	margin:0 auto;
+
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 3;
@@ -194,8 +200,8 @@
 }
 
 #barchartSnelheid {
-	height: 400px;
-	width: 400px;
+	height: 300px;
+	width: 300px;
 
 	grid-column-start: 3;
 	grid-column-end: 4;
