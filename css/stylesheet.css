@@ -1,0 +1,218 @@
+
+#page {  /*The page itself*/
+	max-width: 1200px;
+	min-width:300px;
+	position:relative;
+	margin:0 auto;
+	height:100%;
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+.container { /*The container with the content in it.*/
+	display: grid;
+	grid-template-columns: 5%  90% 5%;
+	grid-template-rows: 5% 3% 20% 3% 20% 3% 20% 3% 20% 5%; /*settin up the grid for the content.*/
+	background-color: #F0F8FF	;
+	position:relative;
+	margin:0 auto;
+	height: 800px ;
+	min-width:330px;
+	max-width: 500px;
+}
+
+#afstandtekst { /*The titels for the graphs*/
+	display: grid;
+	position:relative;
+	margin:0 auto;
+
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#vooraadtekst {
+	display: grid;
+	position:relative;
+	margin:0 auto;
+
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+#snelheidtekst{
+	display: grid;
+	position:relative;
+	margin:0 auto;
+
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+
+
+#linechartAfstand { /*The graphs*/
+	display: grid;
+	height: 80%;
+	width: 80%;
+
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+	position:relative;
+	margin:0 auto;
+}
+
+#barchartVooraad {
+	display: grid;
+	height: 80%;
+	width: 80%;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
+
+	position:relative;
+	margin:0 auto;
+}
+
+#barchartSnelheid {
+	display: grid;
+	height: 50%;
+	width: 50%;
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 7;
+	grid-row-end: 8;
+
+	position:relative;
+	margin:0 auto;
+}
+
+#Spacex { /*The spacex image*/
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 9;
+	grid-row-end: 10;
+
+	position:relative;
+	margin:0 auto;
+
+}
+
+
+@media only screen and (min-width: 420px){
+
+
+.container {
+	height: 1200px ;
+	min-width:500px;
+	max-width: 600px;
+	font-size: 24px;
+}
+
+}
+@media only screen and (min-width:720px){
+
+.container {
+
+	grid-template-columns: 10% 40% 40% 10%; /*making the grid wider for a desktop dashboard.*/
+	grid-template-rows: 10% 10% 30% 10% 30% 10%;
+	height: 800px ;
+	min-width:720px;
+	max-width:1000px;
+	font-size: 36px;
+
+
+}
+
+#linechartAfstand {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+
+#barchartVooraad {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+}
+
+#barchartSnelheid {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 5;
+	grid-row-end: 6;
+}
+
+#Spacex {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
+
+}
+
+#afstandtekst {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#vooraadtekst {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#snelheidtekst{
+
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+}
+
+@media only screen and (min-width:1000px){
+
+
+	#page { 
+	background-color:lightblue;
+
+}
+
+	.container {
+	font-size: 42px;
+
+}
+
+#linechartAfstand {
+	height: 100%;
+	width: 100%;
+}
+
+
+#barchartVooraad {
+	height: 100%;
+	width: 100%;
+}
+
+#barchartSnelheid {
+
+	height: 100%;
+	width: 80%;
+}
+
+
+}
